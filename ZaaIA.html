@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZaaIA - IA Sem Censura</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f111a; /* Cor de fundo escura baseada na sua imagem */
+            color: #ffffff;
+            margin: 0;
+            overflow-x: hidden;
+        }
+        
+        .glow-text {
+            color: #818cf8;
+            text-shadow: 0 0 20px rgba(129, 140, 248, 0.4);
+        }
+
+        .btn-primary {
+            background-color: #6366f1; /* Cor do botão semelhante ao da sua UI */
+            box-shadow: 0 0 15px rgba(99, 102, 241, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #4f46e5;
+            box-shadow: 0 0 25px rgba(99, 102, 241, 0.8);
+            transform: translateY(-2px);
+        }
+
+        /* Fundo com efeito sutil */
+        .bg-pattern {
+            background-image: radial-gradient(circle at 50% 0%, #1e1b4b 0%, transparent 50%);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center bg-pattern relative">
+
+    <div class="relative z-10 max-w-3xl mx-auto px-6 py-12 text-center">
+        <!-- Logo/Título -->
+        <h1 class="text-6xl md:text-8xl font-extrabold mb-4 tracking-tighter glow-text">
+            ZaaIA
+        </h1>
+        
+        <!-- Subtítulo -->
+        <h2 class="text-2xl md:text-3xl font-semibold mb-6 text-gray-200">
+            A Inteligência Artificial <span class="text-red-400">Sem Censura</span>
+        </h2>
+        
+        <!-- Descrição -->
+        <p class="text-lg md:text-xl text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed">
+            Experimente a verdadeira liberdade. Converse, explore ideias e faça perguntas sem filtros, amarras ou bloqueios de segurança artificiais.
+        </p>
+        
+        <!-- Botão de Ação -->
+        <button id="btnAcessar" class="btn-primary text-white font-bold py-4 px-10 rounded-xl text-xl w-full sm:w-auto">
+            Acessar ZaaIA Agora
+        </button>
+
+    </div>
+
+    <script>
+        // ====================================================================
+        // CONFIGURAÇÃO DO LINK DE REDIRECIONAMENTO (ALTERE AQUI)
+        // ====================================================================
+        const LINK_ATUAL_DO_BORE = "http://bore.pub:27365"; 
+        // ====================================================================
+
+        document.getElementById('btnAcessar').addEventListener('click', function() {
+            // Adiciona um pequeno feedback visual antes de redirecionar
+            this.innerHTML = "Redirecionando...";
+            this.style.opacity = "0.8";
+            
+            setTimeout(() => {
+                window.location.href = LINK_ATUAL_DO_BORE;
+            }, 300); // 300ms de delay para a animação do clique
+        });
+    </script>
+</body>
+</html>
